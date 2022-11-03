@@ -1,5 +1,5 @@
 const express = require("express");
-// const port = 8080;
+const port = 8080;
 const app = express();
 const cors = require("cors");
 
@@ -11,6 +11,6 @@ app.use(express.json());
 // ENDPOINTS
 app.use("/api/items", itemRoute);
 app.use("/api/cart", cartRoute);
-app.listen(process.env.PORT || 3000, () => {
+app.listen(port, () => {
   console.log(`Express server running on port ${port}.`);
 });
